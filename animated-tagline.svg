@@ -1,75 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 75" width="100%" height="75">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="80">
   <defs>
-    <style><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Orbitron:wght@700&family=Cinzel:wght@800&display=swap');
+    <!-- Deep Bottle Green Background -->
+    <linearGradient id="tagBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041812" />
+      <stop offset="50%" stop-color="#0b2c21" />
+      <stop offset="100%" stop-color="#061f18" />
+    </linearGradient>
 
-      /* Total Cycle: 9s (3s per unique phrase) */
-      @keyframes showPhrase1 {
-        0%, 30% { opacity: 1; transform: translateY(0px) scale(1); }
-        33%, 97% { opacity: 0; transform: translateY(-14px) scale(0.95); }
-        100% { opacity: 1; transform: translateY(0px) scale(1); }
-      }
+    <!-- Subtle Gold/Emerald Border -->
+    <linearGradient id="tagBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#f6d365" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.4" />
+    </linearGradient>
 
-      @keyframes showPhrase2 {
-        0%, 30% { opacity: 0; transform: translateY(14px) scale(0.95); }
-        33%, 63% { opacity: 1; transform: translateY(0px) scale(1); }
-        66%, 100% { opacity: 0; transform: translateY(-14px) scale(0.95); }
-      }
-
-      @keyframes showPhrase3 {
-        0%, 63% { opacity: 0; transform: translateY(14px) scale(0.95); }
-        66%, 96% { opacity: 1; transform: translateY(0px) scale(1); }
-        100% { opacity: 0; transform: translateY(-14px) scale(0.95); }
-      }
-
-      /* Phrase 1: Creating my Own Identity (Neon Rose in Righteous) */
-      .phrase-1 {
-        font-family: 'Righteous', -apple-system, sans-serif;
-        font-size: 30px;
-        letter-spacing: 3.5px;
-        fill: #ff2a85;
-        filter: drop-shadow(0 0 15px rgba(255, 42, 133, 0.7));
-        animation: showPhrase1 9s infinite ease-in-out;
-      }
-
-      /* Phrase 2: From Ideas To Implementation (Electric Cyan in Orbitron) */
-      .phrase-2 {
-        font-family: 'Orbitron', -apple-system, sans-serif;
-        font-size: 27px;
-        font-weight: 800;
-        letter-spacing: 5px;
-        fill: #00f2fe;
-        filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.7));
-        animation: showPhrase2 9s infinite ease-in-out;
-      }
-
-      /* Phrase 3: Pursuing AICS @ IIT PATNA (Radiant Gold in Cinzel) */
-      .phrase-3 {
-        font-family: 'Cinzel', Georgia, serif;
-        font-size: 26px;
-        font-weight: 800;
-        letter-spacing: 4.5px;
-        fill: #fbbf24;
-        filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.7));
-        animation: showPhrase3 9s infinite ease-in-out;
-      }
-    ]]></style>
+    <!-- Crisp Subtle Shadow (No Deep Muddy Blur) -->
+    <filter id="crispTagShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
   </defs>
 
-  <rect width="100%" height="100%" fill="transparent" />
+  <style><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Orbitron:wght@700&family=Cinzel:wght@800&display=swap');
+
+    /* Total Cycle: 9s (3s per phrase) */
+    @keyframes showPhrase1 {
+      0%, 30% { opacity: 1; transform: translateY(0px) scale(1); }
+      33%, 97% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0px) scale(1); }
+    }
+
+    @keyframes showPhrase2 {
+      0%, 30% { opacity: 0; transform: translateY(12px) scale(0.96); }
+      33%, 63% { opacity: 1; transform: translateY(0px) scale(1); }
+      66%, 100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+    }
+
+    @keyframes showPhrase3 {
+      0%, 63% { opacity: 0; transform: translateY(12px) scale(0.96); }
+      66%, 96% { opacity: 1; transform: translateY(0px) scale(1); }
+      100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+    }
+
+    /* Phrase 1: Creating my Own Identity (Crisp Vibrant Rose Pink) */
+    .phrase-1 {
+      font-family: 'Righteous', -apple-system, sans-serif;
+      font-size: 28px;
+      letter-spacing: 3.5px;
+      fill: #ff6b9d;
+      filter: url(#crispTagShadow);
+      animation: showPhrase1 9s infinite ease-in-out;
+    }
+
+    /* Phrase 2: From Ideas To Implementation (Crisp Electric Cyan) */
+    .phrase-2 {
+      font-family: 'Orbitron', -apple-system, sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      fill: #38bdf8;
+      filter: url(#crispTagShadow);
+      animation: showPhrase2 9s infinite ease-in-out;
+    }
+
+    /* Phrase 3: Pursuing AICS @ IIT PATNA (Crisp Radiant Gold) */
+    .phrase-3 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 4.5px;
+      fill: #fde047;
+      filter: url(#crispTagShadow);
+      animation: showPhrase3 9s infinite ease-in-out;
+    }
+  ]]></style>
+
+  <!-- Deep Bottle Green Background Box (Works on Both Light & Dark Modes) -->
+  <rect x="2" y="2" width="896" height="76" rx="16" fill="url(#tagBg)" stroke="url(#tagBorder)" stroke-width="1.8" />
 
   <!-- Phrase 1: Creating my Own Identity -->
-  <text x="425" y="48" text-anchor="middle" class="phrase-1">
+  <text x="450" y="50" text-anchor="middle" class="phrase-1">
     ⚡ Creating my Own Identity
   </text>
 
   <!-- Phrase 2: From Ideas To Implementation -->
-  <text x="425" y="48" text-anchor="middle" class="phrase-2">
+  <text x="450" y="50" text-anchor="middle" class="phrase-2">
     💡 From Ideas To Implementation
   </text>
 
   <!-- Phrase 3: Pursuing AICS @ IIT PATNA -->
-  <text x="425" y="48" text-anchor="middle" class="phrase-3">
+  <text x="450" y="50" text-anchor="middle" class="phrase-3">
     🏛️ Pursuing AICS @ IIT PATNA
   </text>
 </svg>

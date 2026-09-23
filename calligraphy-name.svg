@@ -1,174 +1,145 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="300">
   <defs>
-    <style><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Righteous&family=Cinzel:wght@700;800&display=swap');
-
-      /* 1. Name: Luxury Calligraphy */
-      .calligraphy-name {
-        font-family: 'Great Vibes', 'Alex Brush', 'Dancing Script', cursive;
-        font-size: 96px;
-        font-weight: 400;
-        fill: url(#goldGrad);
-        filter: url(#nameGlow);
-        letter-spacing: 2.5px;
-      }
-
-      /* 2. Made To Be Different: Modern Futuristic Distinct Style & Electric Neon Cyan-Purple Color */
-      .title-different {
-        font-family: 'Righteous', -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: 25px;
-        letter-spacing: 9px;
-        text-transform: uppercase;
-        fill: url(#neonCyanPurple);
-        filter: drop-shadow(0 0 14px rgba(0, 242, 254, 0.6));
-      }
-
-      /* 3. Code Curiosity Continuous Learning: Luxury Roman Serif Style & Radiant Sunset Peach Color */
-      .title-code {
-        font-family: 'Cinzel', Georgia, serif;
-        font-size: 16px;
-        font-weight: 800;
-        letter-spacing: 6.5px;
-        text-transform: uppercase;
-        fill: url(#sunsetCoral);
-        filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5));
-      }
-
-      /* Animated Golden Infinity */
-      @keyframes infinityFlow {
-        0% { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -200; }
-      }
-      @keyframes infinityPulse {
-        0%, 100% {
-          filter: drop-shadow(0 0 6px #ffd700) drop-shadow(0 0 14px rgba(245, 158, 11, 0.85));
-          transform: scale(1);
-        }
-        50% {
-          filter: drop-shadow(0 0 14px #fff5b8) drop-shadow(0 0 28px rgba(251, 191, 36, 1));
-          transform: scale(1.15);
-        }
-      }
-      .golden-infinity {
-        stroke-dasharray: 24 8;
-        animation: infinityFlow 2.8s linear infinite, infinityPulse 3s ease-in-out infinite;
-        transform-origin: 0 0;
-      }
-
-      /* Ambient Twinkling Stars */
-      .sparkle { animation: twinkle 3s infinite ease-in-out; }
-      .sparkle-delay { animation: twinkle 3s infinite ease-in-out 1.5s; }
-
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.2; transform: scale(0.7); }
-        50% { opacity: 1; transform: scale(1.3); }
-      }
-
-      @keyframes floatSoft {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-4px); }
-      }
-      .banner-group {
-        animation: floatSoft 6s ease-in-out infinite;
-      }
-    ]]></style>
-
-    <!-- Metallic 24K Gold Gradient for Calligraphy Name -->
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff8d6" />
-      <stop offset="25%" stop-color="#f6d365" />
-      <stop offset="65%" stop-color="#fda085" />
-      <stop offset="100%" stop-color="#fbc2eb" />
+    <!-- Luxury Deep Bottle Green Gradients -->
+    <linearGradient id="bottleGreenBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041812" />
+      <stop offset="50%" stop-color="#0b2c21" />
+      <stop offset="100%" stop-color="#061f18" />
     </linearGradient>
 
-    <!-- Golden Infinity Gradient -->
-    <linearGradient id="infinityGold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Elegant Gold Border Gradient -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.3" />
+      <stop offset="25%" stop-color="#f6d365" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#fff1be" stop-opacity="1" />
+      <stop offset="75%" stop-color="#f6d365" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- 24K Gold Text Gradient (High Contrast) -->
+    <linearGradient id="textGold" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fffbeb" />
-      <stop offset="30%" stop-color="#fde047" />
+      <stop offset="30%" stop-color="#fef08a" />
       <stop offset="70%" stop-color="#f59e0b" />
       <stop offset="100%" stop-color="#d97706" />
     </linearGradient>
 
-    <!-- Distinct Color 1: Electric Neon Cyan to Magenta -->
-    <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#4facfe" />
-      <stop offset="100%" stop-color="#f43f5e" />
-    </linearGradient>
-
-    <!-- Distinct Color 2: Luminous Sunset Coral to Peach -->
-    <linearGradient id="sunsetCoral" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffd269" />
-      <stop offset="50%" stop-color="#ff9a8b" />
-      <stop offset="100%" stop-color="#ff6a88" />
-    </linearGradient>
-
-    <!-- Bottom Border Accent Gradient -->
-    <linearGradient id="borderAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
-      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.85" />
-      <stop offset="50%" stop-color="#f59e0b" stop-opacity="1" />
-      <stop offset="80%" stop-color="#f43f5e" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
-    </linearGradient>
-
-    <!-- Radial Background Glow -->
-    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.14" />
-      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.07" />
-      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0" />
-    </radialGradient>
-
-    <filter id="nameGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#f6d365" flood-opacity="0.45" />
+    <!-- Subtle, Crisp Drop Shadow (No Deep Muddy Blur) -->
+    <filter id="crispShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.6" />
     </filter>
   </defs>
 
-  <!-- Ambient Light -->
-  <rect x="0" y="0" width="900" height="280" fill="transparent" />
-  <ellipse cx="450" cy="140" rx="420" ry="120" fill="url(#ambientGlow)" />
+  <style><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Righteous&family=Cinzel:wght@700;800&display=swap');
 
-  <g class="banner-group">
+    /* 1. Calligraphy Name: Crisp, High-Contrast Cursive */
+    .calligraphy-name {
+      font-family: 'Brush Script MT', 'Segoe Script', 'Great Vibes', 'Dancing Script', cursive;
+      font-size: 94px;
+      font-weight: 700;
+      fill: url(#textGold);
+      filter: url(#crispShadow);
+      letter-spacing: 2px;
+    }
+
+    /* 2. Made To Be Different: Crisp Modern Display */
+    .title-different {
+      font-family: 'Righteous', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 24px;
+      letter-spacing: 9px;
+      text-transform: uppercase;
+      fill: #38bdf8;
+      filter: url(#crispShadow);
+    }
+
+    /* 3. Code Tagline: Crisp Roman Serif */
+    .title-code {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 15.5px;
+      font-weight: 800;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      fill: #fef08a;
+      filter: url(#crispShadow);
+    }
+
+    /* Animated Gold Infinity (Smooth & Clean) */
+    @keyframes infinityFlow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -180; }
+    }
+    @keyframes infinityPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 3px #fde047); }
+      50% { transform: scale(1.12); filter: drop-shadow(0 0 10px #fef08a); }
+    }
+    .golden-infinity {
+      stroke-dasharray: 22 7;
+      animation: infinityFlow 2.8s linear infinite, infinityPulse 3s ease-in-out infinite;
+      transform-origin: 0 0;
+    }
+
+    /* Twinkling Star Accents */
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+    .sparkle { animation: twinkle 3s infinite ease-in-out; }
+    .sparkle-delay { animation: twinkle 3s infinite ease-in-out 1.5s; }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+    .content-group {
+      animation: gentleFloat 6s ease-in-out infinite;
+    }
+  ]]></style>
+
+  <!-- Solid Luxury Bottle Green Card Background -->
+  <rect x="2" y="2" width="896" height="296" rx="20" fill="url(#bottleGreenBg)" stroke="url(#goldBorder)" stroke-width="2.5" />
+
+  <!-- Inner Subtle Ambient Accent -->
+  <rect x="8" y="8" width="884" height="284" rx="16" fill="none" stroke="#10b981" stroke-opacity="0.15" stroke-width="1" />
+
+  <g class="content-group">
     <!-- Star Sparkles -->
-    <g transform="translate(130, 72)" class="sparkle">
-      <path d="M 0 -16 Q 0 0 16 0 Q 0 0 0 16 Q 0 0 -16 0 Q 0 0 0 -16 Z" fill="#ffd700" />
+    <g transform="translate(130, 75)" class="sparkle">
+      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z" fill="#ffd700" />
     </g>
-    <g transform="translate(770, 76)" class="sparkle-delay">
-      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z" fill="#00f2fe" />
+    <g transform="translate(770, 78)" class="sparkle-delay">
+      <path d="M 0 -12 Q 0 0 12 0 Q 0 0 0 12 Q 0 0 -12 0 Q 0 0 0 -12 Z" fill="#fde047" />
     </g>
-    <g transform="translate(220, 42)" class="sparkle-delay">
-      <circle cx="0" cy="0" r="3.5" fill="#f43f5e" />
+    <g transform="translate(220, 45)" class="sparkle-delay">
+      <circle cx="0" cy="0" r="3" fill="#38bdf8" />
     </g>
-    <g transform="translate(680, 46)" class="sparkle">
-      <circle cx="0" cy="0" r="3.5" fill="#fde047" />
+    <g transform="translate(680, 48)" class="sparkle">
+      <circle cx="0" cy="0" r="3" fill="#34d399" />
     </g>
 
-    <!-- 1. Name in Luxury Calligraphy (Enlarged) -->
-    <text x="450" y="102" text-anchor="middle" class="calligraphy-name">Alankrita Paul</text>
+    <!-- 1. Name in Crisp Luxury Calligraphy -->
+    <text x="450" y="108" text-anchor="middle" class="calligraphy-name">Alankrita Paul</text>
 
     <!-- 2. Calligraphy Swash Flourish -->
-    <path d="M 230 124 C 330 137, 390 127, 450 125 C 510 123, 570 137, 670 124 C 610 130, 510 127, 450 126 C 390 127, 290 130, 230 124 Z" fill="url(#goldGrad)" opacity="0.85" />
+    <path d="M 230 130 C 330 142, 390 133, 450 131 C 510 129, 570 142, 670 130 C 610 136, 510 133, 450 132 C 390 133, 290 136, 230 130 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Animated Golden Colour Infinity (Centered prominently below name) -->
-    <g transform="translate(450, 154)">
-      <path d="M 0 0 C 18 -20, 48 -20, 48 0 C 48 20, 18 20, 0 0 C -18 -20, -48 -20, -48 0 C -48 20, -18 20, 0 0 Z"
+    <!-- 3. Animated Golden Infinity Symbol (Centered cleanly) -->
+    <g transform="translate(450, 162)">
+      <path d="M 0 0 C 18 -20, 46 -20, 46 0 C 46 20, 18 20, 0 0 C -18 -20, -46 -20, -46 0 C -46 20, -18 20, 0 0 Z"
             fill="none"
-            stroke="url(#infinityGold)"
+            stroke="url(#textGold)"
             stroke-width="4.5"
             stroke-linecap="round"
             class="golden-infinity" />
-      <circle cx="0" cy="0" r="3" fill="#fffbeb" />
+      <circle cx="0" cy="0" r="2.5" fill="#fffbeb" />
     </g>
 
-    <!-- 4. "MADE TO BE DIFFERENT" - Distinct Modern Futuristic Style & Vibrant Cyan/Pink Color -->
-    <text x="450" y="210" text-anchor="middle" class="title-different">MADE TO BE DIFFERENT</text>
+    <!-- 4. "MADE TO BE DIFFERENT" - High-Contrast Electric Cyan -->
+    <text x="450" y="222" text-anchor="middle" class="title-different">MADE TO BE DIFFERENT</text>
 
-    <!-- 5. "CODE • CURIOSITY • CONTINUOUS LEARNING" - Distinct Roman Serif Style & Radiant Coral Color -->
-    <text x="450" y="245" text-anchor="middle" class="title-code">
-      CODE <tspan fill="#ffd700">✦</tspan> CURIOSITY <tspan fill="#ffd700">✦</tspan> CONTINUOUS LEARNING
+    <!-- 5. "CODE • CURIOSITY • CONTINUOUS LEARNING" - High-Contrast Warm Gold -->
+    <text x="450" y="258" text-anchor="middle" class="title-code">
+      CODE <tspan fill="#34d399">✦</tspan> CURIOSITY <tspan fill="#34d399">✦</tspan> CONTINUOUS LEARNING
     </text>
   </g>
-
-  <!-- Bottom Accent Line -->
-  <line x1="80" y1="272" x2="820" y2="272" stroke="url(#borderAccent)" stroke-width="2.5" />
 </svg>
