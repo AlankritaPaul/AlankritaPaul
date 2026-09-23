@@ -1,75 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 60" width="100%" height="60">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 60" width="100%" height="60">
   <defs>
     <style><![CDATA[
       @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Orbitron:wght@700&family=Cinzel:wght@800&display=swap');
 
-      /* Animation Loop: 9 seconds total (3s per phrase) */
-      @keyframes showLine1 {
+      /* Total Cycle: 9s (3s per unique phrase) */
+      @keyframes showPhrase1 {
         0%, 30% { opacity: 1; transform: translateY(0px) scale(1); }
         33%, 97% { opacity: 0; transform: translateY(-12px) scale(0.95); }
         100% { opacity: 1; transform: translateY(0px) scale(1); }
       }
 
-      @keyframes showLine2 {
+      @keyframes showPhrase2 {
         0%, 30% { opacity: 0; transform: translateY(12px) scale(0.95); }
         33%, 63% { opacity: 1; transform: translateY(0px) scale(1); }
         66%, 100% { opacity: 0; transform: translateY(-12px) scale(0.95); }
       }
 
-      @keyframes showLine3 {
+      @keyframes showPhrase3 {
         0%, 63% { opacity: 0; transform: translateY(12px) scale(0.95); }
         66%, 96% { opacity: 1; transform: translateY(0px) scale(1); }
         100% { opacity: 0; transform: translateY(-12px) scale(0.95); }
       }
 
-      /* Line 1: Creating my Own Identity (Neon Pink/Rose in Righteous) */
-      .line-1 {
+      /* Phrase 1: Creating my Own Identity (Neon Rose in Righteous) */
+      .phrase-1 {
         font-family: 'Righteous', -apple-system, sans-serif;
         font-size: 26px;
         letter-spacing: 3px;
         fill: #ff2a85;
-        filter: drop-shadow(0 0 10px rgba(255, 42, 133, 0.6));
-        animation: showLine1 9s infinite ease-in-out;
+        filter: drop-shadow(0 0 12px rgba(255, 42, 133, 0.65));
+        animation: showPhrase1 9s infinite ease-in-out;
       }
 
-      /* Line 2: Made To Be Different (Electric Cyan in Orbitron) */
-      .line-2 {
+      /* Phrase 2: From Ideas To Implementation (Electric Cyan in Orbitron) */
+      .phrase-2 {
         font-family: 'Orbitron', -apple-system, sans-serif;
         font-size: 23px;
         font-weight: 700;
         letter-spacing: 5px;
         fill: #00f2fe;
-        filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.6));
-        animation: showLine2 9s infinite ease-in-out;
+        filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.65));
+        animation: showPhrase2 9s infinite ease-in-out;
       }
 
-      /* Line 3: Code • Curiosity • Continuous Learning (Gold in Cinzel) */
-      .line-3 {
+      /* Phrase 3: Pursuing AICS @ IIT PATNA (Radiant Gold in Cinzel) */
+      .phrase-3 {
         font-family: 'Cinzel', Georgia, serif;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 800;
         letter-spacing: 4px;
         fill: #fbbf24;
-        filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.6));
-        animation: showLine3 9s infinite ease-in-out;
+        filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.65));
+        animation: showPhrase3 9s infinite ease-in-out;
       }
     ]]></style>
   </defs>
 
   <rect width="100%" height="100%" fill="transparent" />
 
-  <!-- Animated Phrase 1 -->
-  <text x="350" y="38" text-anchor="middle" class="line-1">
+  <!-- Phrase 1: Creating my Own Identity -->
+  <text x="375" y="38" text-anchor="middle" class="phrase-1">
     ⚡ Creating my Own Identity
   </text>
 
-  <!-- Animated Phrase 2 -->
-  <text x="350" y="38" text-anchor="middle" class="line-2">
-    💎 Made To Be Different
+  <!-- Phrase 2: From Ideas To Implementation -->
+  <text x="375" y="38" text-anchor="middle" class="phrase-2">
+    💡 From Ideas To Implementation
   </text>
 
-  <!-- Animated Phrase 3 -->
-  <text x="350" y="38" text-anchor="middle" class="line-3">
-    ✦ Code • Curiosity • Continuous Learning ✦
+  <!-- Phrase 3: Pursuing AICS @ IIT PATNA -->
+  <text x="375" y="38" text-anchor="middle" class="phrase-3">
+    🏛️ Pursuing AICS @ IIT PATNA
   </text>
 </svg>
