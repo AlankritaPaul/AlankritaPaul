@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240">
   <defs>
-    <!-- Straight Elegant Gold Gradient -->
+    <!-- Elegant Gold Text Gradient -->
     <linearGradient id="textGold" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#b45309" />
       <stop offset="25%" stop-color="#f59e0b" />
@@ -16,7 +16,7 @@
       <stop offset="100%" stop-color="#d97706" />
     </linearGradient>
 
-    <!-- Bottom Accent Line Gradient -->
+    <!-- Bottom Accent Divider Gradient -->
     <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0" />
       <stop offset="20%" stop-color="#f59e0b" stop-opacity="0.8" />
@@ -31,24 +31,23 @@
   </defs>
 
   <style><![CDATA[
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Righteous&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fredoka:wght@600;700&display=swap');
 
-    /* 1. Name: Straight, Upright, Luxury Serif (No Cursive, No Italic, Perfectly Straight) */
-    .straight-name {
-      font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
-      font-size: 76px;
-      font-weight: 900;
+    /* 1. Name: Dream Highway Font */
+    .name-title {
+      font-family: 'Dream Highway', 'DreamHighway', 'DM Serif Display', 'Playfair Display', Georgia, serif;
+      font-size: 78px;
+      font-weight: 800;
       font-style: normal;
       fill: url(#textGold);
       filter: url(#crispDrop);
-      letter-spacing: 7px;
-      text-transform: uppercase;
+      letter-spacing: 4px;
     }
 
-    /* 2. Made To Be Different: Straight Modern Display */
+    /* 2. Subtitles Below Name: Brownie Font */
     .title-different {
-      font-family: 'Righteous', -apple-system, sans-serif;
-      font-size: 21px;
+      font-family: 'Brownie', 'Brownie Sans', 'CS Brownie', 'Fredoka', -apple-system, sans-serif;
+      font-size: 22px;
       font-weight: 700;
       font-style: normal;
       letter-spacing: 8px;
@@ -57,11 +56,10 @@
       filter: url(#crispDrop);
     }
 
-    /* 3. Code Tagline: Straight Roman Serif */
     .title-code {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 14.5px;
-      font-weight: 800;
+      font-family: 'Brownie', 'Brownie Sans', 'CS Brownie', 'Fredoka', -apple-system, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
       font-style: normal;
       letter-spacing: 6px;
       text-transform: uppercase;
@@ -101,7 +99,7 @@
     }
   ]]></style>
 
-  <!-- Normal Transparent Background (No Added Colored Box) -->
+  <!-- Normal Transparent Background -->
   <rect x="0" y="0" width="900" height="240" fill="none" />
 
   <g class="content-group">
@@ -119,13 +117,13 @@
       <circle cx="0" cy="0" r="3" fill="#0284c7" />
     </g>
 
-    <!-- 1. Name: Straight Upright Luxury Typography -->
-    <text x="450" y="90" text-anchor="middle" class="straight-name">Alankrita Paul</text>
+    <!-- 1. Name: Dream Highway Font -->
+    <text x="450" y="90" text-anchor="middle" class="name-title">Alankrita Paul</text>
 
-    <!-- 2. Symmetrical Straight Gold Accent Swash -->
+    <!-- 2. Gold Accent Swash -->
     <path d="M 240 108 C 340 118, 400 112, 450 110 C 500 108, 560 118, 660 108 C 600 113, 500 111, 450 111 C 400 111, 300 113, 240 108 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Animated Golden Infinity Symbol (Centered Cleanly) -->
+    <!-- 3. Animated Golden Infinity Symbol -->
     <g transform="translate(450, 138)">
       <path d="M 0 0 C 18 -20, 46 -20, 46 0 C 46 20, 18 20, 0 0 C -18 -20, -46 -20, -46 0 C -46 20, -18 20, 0 0 Z"
             fill="none"
@@ -136,10 +134,10 @@
       <circle cx="0" cy="0" r="2.5" fill="#f59e0b" />
     </g>
 
-    <!-- 4. Straight "MADE TO BE DIFFERENT" -->
+    <!-- 4. "MADE TO BE DIFFERENT" in Brownie Font -->
     <text x="450" y="186" text-anchor="middle" class="title-different">MADE TO BE DIFFERENT</text>
 
-    <!-- 5. Straight "CODE • CURIOSITY • CONTINUOUS LEARNING" -->
+    <!-- 5. "CODE • CURIOSITY • CONTINUOUS LEARNING" in Brownie Font -->
     <text x="450" y="216" text-anchor="middle" class="title-code">
       CODE <tspan fill="#0284c7">✦</tspan> CURIOSITY <tspan fill="#0284c7">✦</tspan> CONTINUOUS LEARNING
     </text>

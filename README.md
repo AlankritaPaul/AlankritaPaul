@@ -48,5 +48,5 @@
 ---
 
 <p align="center">
-  <font size="4"><i>"Learning by Building" — Alankrita Paul</i></font>
+  <img src="learning-building.svg" alt="Learning by Building" width="600px" />
 </p>

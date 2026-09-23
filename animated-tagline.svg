@@ -6,7 +6,13 @@
   </defs>
 
   <style><![CDATA[
-    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Orbitron:wght@700&family=Cinzel:wght@800&display=swap');
+    /* Monospace Code Font */
+    .mono-line {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+      font-weight: 700;
+      letter-spacing: 1px;
+      filter: url(#crispTagDrop);
+    }
 
     /* Total Cycle: 9s (3s per phrase) */
     @keyframes showPhrase1 {
@@ -27,57 +33,43 @@
       100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
     }
 
-    /* Phrase 1: Straight, Upright (Righteous) */
+    /* Phrase 1: Monospace in Vibrant Coral Rose (#f43f5e) */
     .phrase-1 {
-      font-family: 'Righteous', -apple-system, sans-serif;
-      font-size: 28px;
-      font-style: normal;
-      letter-spacing: 3.5px;
-      fill: #e11d48;
-      filter: url(#crispTagDrop);
+      font-size: 24px;
+      fill: #f43f5e;
       animation: showPhrase1 9s infinite ease-in-out;
     }
 
-    /* Phrase 2: Straight, Upright (Orbitron) */
+    /* Phrase 2: Monospace in Electric Neon Cyan (#00f2fe) */
     .phrase-2 {
-      font-family: 'Orbitron', -apple-system, sans-serif;
-      font-size: 25px;
-      font-weight: 800;
-      font-style: normal;
-      letter-spacing: 5px;
-      fill: #0284c7;
-      filter: url(#crispTagDrop);
+      font-size: 24px;
+      fill: #00f2fe;
       animation: showPhrase2 9s infinite ease-in-out;
     }
 
-    /* Phrase 3: Straight, Upright (Cinzel) */
+    /* Phrase 3: Monospace in Radiant Warm Amber Gold (#fbbf24) */
     .phrase-3 {
-      font-family: 'Cinzel', Georgia, serif;
-      font-size: 25px;
-      font-weight: 900;
-      font-style: normal;
-      letter-spacing: 4.5px;
-      fill: #d97706;
-      filter: url(#crispTagDrop);
+      font-size: 24px;
+      fill: #fbbf24;
       animation: showPhrase3 9s infinite ease-in-out;
     }
   ]]></style>
 
-  <!-- Normal Transparent Background (No Added Colored Box) -->
+  <!-- Normal Transparent Background -->
   <rect width="100%" height="100%" fill="none" />
 
-  <!-- Phrase 1: Creating my Own Identity -->
-  <text x="450" y="42" text-anchor="middle" class="phrase-1">
+  <!-- Phrase 1: Creating my Own Identity (Monospace, Coral Rose) -->
+  <text x="450" y="42" text-anchor="middle" class="mono-line phrase-1">
     ⚡ Creating my Own Identity
   </text>
 
-  <!-- Phrase 2: From Ideas To Implementation -->
-  <text x="450" y="42" text-anchor="middle" class="phrase-2">
+  <!-- Phrase 2: From Ideas To Implementation (Monospace, Electric Cyan) -->
+  <text x="450" y="42" text-anchor="middle" class="mono-line phrase-2">
     💡 From Ideas To Implementation
   </text>
 
-  <!-- Phrase 3: Pursuing AICS @ IIT PATNA -->
-  <text x="450" y="42" text-anchor="middle" class="phrase-3">
+  <!-- Phrase 3: Pursuing AICS @ IIT PATNA (Monospace, Amber Gold) -->
+  <text x="450" y="42" text-anchor="middle" class="mono-line phrase-3">
     🏛️ Pursuing AICS @ IIT PATNA
   </text>
 </svg>
