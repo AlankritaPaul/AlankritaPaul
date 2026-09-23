@@ -17,17 +17,14 @@
 
 ---
 
-<!-- Developer Dialogue -->
-<div align="center">
-
-> **What happens when code runs on the first try?**  
-> **Ans —** We don't debug it.  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**We Commit and Push before it Change.** 🚀
-</div>
+<!-- Developer Dialogue Card with Label and Color -->
+<p align="center">
+  <img src="quote-card.svg" alt="Developer Reality Check" width="680px" />
+</p>
 
 ---
 
-### 🛠️ TECH STACK & ARSENAL
+### 🛠️ TECHNOLOGIES & TOOLS
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />

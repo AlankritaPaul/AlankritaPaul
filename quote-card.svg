@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 110" width="100%" height="110">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#38bdf8" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Container Box with Gradient Border -->
+  <rect x="2" y="2" width="716" height="106" rx="14" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="1.8" filter="url(#cardShadow)" />
+
+  <!-- Question Section -->
+  <g transform="translate(24, 22)">
+    <!-- Colored Label Badge -->
+    <rect x="0" y="0" width="84" height="24" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="42" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#38bdf8" letter-spacing="1">DEV FACT</text>
+    
+    <!-- Question Text -->
+    <text x="100" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">
+      What happens when code runs on the first try?
+    </text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="24" y1="58" x2="696" y2="58" stroke="#1e293b" stroke-width="1.2" />
+
+  <!-- Answer Section with Distinct Colors -->
+  <g transform="translate(26, 88)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600">
+      <tspan fill="#94a3b8">Ans — </tspan>
+      <tspan fill="#f43f5e" font-weight="700">We don't debug it.</tspan>
+      <tspan fill="#4ade80" font-weight="800"> We Commit and Push before it Change. 🚀</tspan>
+    </text>
+  </g>
+</svg>
