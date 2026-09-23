@@ -24,6 +24,13 @@
 
 ---
 
+<!-- Live Running Code & Terminal Output Animation -->
+<p align="center">
+  <img src="live-code.svg" alt="Live Running Python Code" width="680px" />
+</p>
+
+---
+
 ### 🛠️ TECHNOLOGIES & TOOLS
 
 <p align="center">
