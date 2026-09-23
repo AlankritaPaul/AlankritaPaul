@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 60" width="100%" height="60">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 75" width="100%" height="75">
   <defs>
     <style><![CDATA[
       @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Orbitron:wght@700&family=Cinzel:wght@800&display=swap');
@@ -6,51 +6,51 @@
       /* Total Cycle: 9s (3s per unique phrase) */
       @keyframes showPhrase1 {
         0%, 30% { opacity: 1; transform: translateY(0px) scale(1); }
-        33%, 97% { opacity: 0; transform: translateY(-12px) scale(0.95); }
+        33%, 97% { opacity: 0; transform: translateY(-14px) scale(0.95); }
         100% { opacity: 1; transform: translateY(0px) scale(1); }
       }
 
       @keyframes showPhrase2 {
-        0%, 30% { opacity: 0; transform: translateY(12px) scale(0.95); }
+        0%, 30% { opacity: 0; transform: translateY(14px) scale(0.95); }
         33%, 63% { opacity: 1; transform: translateY(0px) scale(1); }
-        66%, 100% { opacity: 0; transform: translateY(-12px) scale(0.95); }
+        66%, 100% { opacity: 0; transform: translateY(-14px) scale(0.95); }
       }
 
       @keyframes showPhrase3 {
-        0%, 63% { opacity: 0; transform: translateY(12px) scale(0.95); }
+        0%, 63% { opacity: 0; transform: translateY(14px) scale(0.95); }
         66%, 96% { opacity: 1; transform: translateY(0px) scale(1); }
-        100% { opacity: 0; transform: translateY(-12px) scale(0.95); }
+        100% { opacity: 0; transform: translateY(-14px) scale(0.95); }
       }
 
       /* Phrase 1: Creating my Own Identity (Neon Rose in Righteous) */
       .phrase-1 {
         font-family: 'Righteous', -apple-system, sans-serif;
-        font-size: 26px;
-        letter-spacing: 3px;
+        font-size: 30px;
+        letter-spacing: 3.5px;
         fill: #ff2a85;
-        filter: drop-shadow(0 0 12px rgba(255, 42, 133, 0.65));
+        filter: drop-shadow(0 0 15px rgba(255, 42, 133, 0.7));
         animation: showPhrase1 9s infinite ease-in-out;
       }
 
       /* Phrase 2: From Ideas To Implementation (Electric Cyan in Orbitron) */
       .phrase-2 {
         font-family: 'Orbitron', -apple-system, sans-serif;
-        font-size: 23px;
-        font-weight: 700;
+        font-size: 27px;
+        font-weight: 800;
         letter-spacing: 5px;
         fill: #00f2fe;
-        filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.65));
+        filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.7));
         animation: showPhrase2 9s infinite ease-in-out;
       }
 
       /* Phrase 3: Pursuing AICS @ IIT PATNA (Radiant Gold in Cinzel) */
       .phrase-3 {
         font-family: 'Cinzel', Georgia, serif;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 800;
-        letter-spacing: 4px;
+        letter-spacing: 4.5px;
         fill: #fbbf24;
-        filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.65));
+        filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.7));
         animation: showPhrase3 9s infinite ease-in-out;
       }
     ]]></style>
@@ -59,17 +59,17 @@
   <rect width="100%" height="100%" fill="transparent" />
 
   <!-- Phrase 1: Creating my Own Identity -->
-  <text x="375" y="38" text-anchor="middle" class="phrase-1">
+  <text x="425" y="48" text-anchor="middle" class="phrase-1">
     ⚡ Creating my Own Identity
   </text>
 
   <!-- Phrase 2: From Ideas To Implementation -->
-  <text x="375" y="38" text-anchor="middle" class="phrase-2">
+  <text x="425" y="48" text-anchor="middle" class="phrase-2">
     💡 From Ideas To Implementation
   </text>
 
   <!-- Phrase 3: Pursuing AICS @ IIT PATNA -->
-  <text x="375" y="38" text-anchor="middle" class="phrase-3">
+  <text x="425" y="48" text-anchor="middle" class="phrase-3">
     🏛️ Pursuing AICS @ IIT PATNA
   </text>
 </svg>

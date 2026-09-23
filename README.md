@@ -10,23 +10,23 @@
 
 ---
 
-<!-- Live Autoplaying Tic-Tac-Toe Game (Enlarged Board, Player Alpha vs Beta, Alternating Winners) -->
+<!-- Live Autoplaying Tic-Tac-Toe Game (Grand Board, Player Alpha vs Beta, Alternating Winners) -->
 <p align="center">
-  <img src="tic-tac-toe.svg" alt="Live Autoplaying Tic-Tac-Toe Game" width="680px" />
+  <img src="tic-tac-toe.svg" alt="Live Autoplaying Tic-Tac-Toe Game" width="800px" />
 </p>
 
 ---
 
 <!-- Developer Dialogue Card with Label and Color -->
 <p align="center">
-  <img src="quote-card.svg" alt="Developer Reality Check" width="680px" />
+  <img src="quote-card.svg" alt="Developer Reality Check" width="800px" />
 </p>
 
 ---
 
-<!-- Live Running Code & Terminal Output Animation -->
+<!-- Live Running Code & Sliding Terminal Output Animation -->
 <p align="center">
-  <img src="live-code.svg" alt="Live Running Python Code" width="680px" />
+  <img src="live-code.svg" alt="Live Running Python Code" width="800px" />
 </p>
 
 ---
@@ -48,5 +48,5 @@
 ---
 
 <p align="center">
-  <i>"Learning by Building" — Alankrita Paul</i>
+  <font size="4"><i>"Learning by Building" — Alankrita Paul</i></font>
 </p>

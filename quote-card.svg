@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 100" width="100%" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="100%" height="120">
   <defs>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0b0f19" />
-      <stop offset="100%" stop-color="#111827" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#080c14" />
     </linearGradient>
 
     <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -12,29 +13,29 @@
     </linearGradient>
 
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#38bdf8" flood-opacity="0.25" />
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#38bdf8" flood-opacity="0.3" />
     </filter>
   </defs>
 
-  <!-- Container Box with Gradient Border -->
-  <rect x="2" y="2" width="716" height="96" rx="14" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="1.8" filter="url(#cardShadow)" />
+  <!-- Big Container Box -->
+  <rect x="2" y="2" width="796" height="116" rx="16" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="2.2" filter="url(#cardShadow)" />
 
-  <!-- Question Section (Without DEV FACT badge) -->
-  <g transform="translate(28, 22)">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="700" fill="#f8fafc">
+  <!-- Question Section (Bigger, Bolder) -->
+  <g transform="translate(32, 32)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18.5" font-weight="800" fill="#f8fafc" letter-spacing="0.3px">
       What happens when code runs on the first try?
     </text>
   </g>
 
   <!-- Divider Line -->
-  <line x1="26" y1="50" x2="694" y2="50" stroke="#1e293b" stroke-width="1.2" />
+  <line x1="28" y1="58" x2="772" y2="58" stroke="#1e293b" stroke-width="1.5" />
 
-  <!-- Answer Section with Distinct Colors -->
-  <g transform="translate(28, 76)">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600">
+  <!-- Answer Section (Bigger, Bolder) -->
+  <g transform="translate(32, 92)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">
       <tspan fill="#94a3b8">Ans — </tspan>
-      <tspan fill="#f43f5e" font-weight="700">We don't debug it.</tspan>
-      <tspan fill="#4ade80" font-weight="800"> We Commit and Push before it Change. 🚀</tspan>
+      <tspan fill="#f43f5e" font-weight="800">We don't debug it.</tspan>
+      <tspan fill="#4ade80" font-weight="900"> We Commit and Push before it Change. 🚀</tspan>
     </text>
   </g>
 </svg>
