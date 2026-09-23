@@ -1,22 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="80">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 65" width="100%" height="65">
   <defs>
-    <!-- Midnight Obsidian / Sapphire Background (Distinct from Bottle Green) -->
-    <linearGradient id="midnightBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050c18" />
-      <stop offset="50%" stop-color="#0d1b30" />
-      <stop offset="100%" stop-color="#07101f" />
-    </linearGradient>
-
-    <!-- Electric Cyan to Gold Border Gradient -->
-    <linearGradient id="cyanGoldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#f6d365" stop-opacity="0.8" />
-    </linearGradient>
-
-    <!-- Crisp Text Drop Shadow -->
-    <filter id="tagTextShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.6" />
+    <filter id="crispTagDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.35" />
     </filter>
   </defs>
 
@@ -42,54 +27,57 @@
       100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
     }
 
-    /* Phrase 1: Creating my Own Identity (Crisp Vibrant Rose Pink) */
+    /* Phrase 1: Straight, Upright (Righteous) */
     .phrase-1 {
       font-family: 'Righteous', -apple-system, sans-serif;
       font-size: 28px;
+      font-style: normal;
       letter-spacing: 3.5px;
-      fill: #ff6b9d;
-      filter: url(#tagTextShadow);
+      fill: #e11d48;
+      filter: url(#crispTagDrop);
       animation: showPhrase1 9s infinite ease-in-out;
     }
 
-    /* Phrase 2: From Ideas To Implementation (Crisp Electric Cyan) */
+    /* Phrase 2: Straight, Upright (Orbitron) */
     .phrase-2 {
       font-family: 'Orbitron', -apple-system, sans-serif;
       font-size: 25px;
       font-weight: 800;
+      font-style: normal;
       letter-spacing: 5px;
-      fill: #38bdf8;
-      filter: url(#tagTextShadow);
+      fill: #0284c7;
+      filter: url(#crispTagDrop);
       animation: showPhrase2 9s infinite ease-in-out;
     }
 
-    /* Phrase 3: Pursuing AICS @ IIT PATNA (Crisp Radiant Gold) */
+    /* Phrase 3: Straight, Upright (Cinzel) */
     .phrase-3 {
       font-family: 'Cinzel', Georgia, serif;
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 25px;
+      font-weight: 900;
+      font-style: normal;
       letter-spacing: 4.5px;
-      fill: #fde047;
-      filter: url(#tagTextShadow);
+      fill: #d97706;
+      filter: url(#crispTagDrop);
       animation: showPhrase3 9s infinite ease-in-out;
     }
   ]]></style>
 
-  <!-- Midnight Obsidian / Sapphire Background Box (Distinct from Bottle Green Box) -->
-  <rect x="2" y="2" width="896" height="76" rx="14" fill="url(#midnightBg)" stroke="url(#cyanGoldBorder)" stroke-width="2" />
+  <!-- Normal Transparent Background (No Added Colored Box) -->
+  <rect width="100%" height="100%" fill="none" />
 
   <!-- Phrase 1: Creating my Own Identity -->
-  <text x="450" y="50" text-anchor="middle" class="phrase-1">
+  <text x="450" y="42" text-anchor="middle" class="phrase-1">
     ⚡ Creating my Own Identity
   </text>
 
   <!-- Phrase 2: From Ideas To Implementation -->
-  <text x="450" y="50" text-anchor="middle" class="phrase-2">
+  <text x="450" y="42" text-anchor="middle" class="phrase-2">
     💡 From Ideas To Implementation
   </text>
 
   <!-- Phrase 3: Pursuing AICS @ IIT PATNA -->
-  <text x="450" y="50" text-anchor="middle" class="phrase-3">
+  <text x="450" y="42" text-anchor="middle" class="phrase-3">
     🏛️ Pursuing AICS @ IIT PATNA
   </text>
 </svg>
