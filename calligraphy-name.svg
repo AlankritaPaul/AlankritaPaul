@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 200" width="100%" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@1,500&amp;display=swap');
+
+      .calligraphy-name {
+        font-family: 'Great Vibes', 'Alex Brush', 'Dancing Script', 'Brush Script MT', cursive;
+        font-size: 78px;
+        font-weight: 400;
+        fill: url(#goldGrad);
+        filter: url(#shadowFilter);
+        letter-spacing: 2px;
+      }
+
+      .tagline {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-size: 15px;
+        letter-spacing: 5px;
+        fill: #94a3b8;
+        text-transform: uppercase;
+      }
+
+      .sparkle {
+        animation: twinkle 3s infinite ease-in-out;
+      }
+      .sparkle-delay {
+        animation: twinkle 3s infinite ease-in-out 1.5s;
+      }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+
+      @keyframes floatName {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+
+      .name-group {
+        animation: floatName 5s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1be" />
+      <stop offset="30%" stop-color="#f6d365" />
+      <stop offset="60%" stop-color="#fda085" />
+      <stop offset="100%" stop-color="#fbc2eb" />
+    </linearGradient>
+
+    <!-- Border Linear Gradient -->
+    <linearGradient id="borderStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f6d365" stop-opacity="0" />
+      <stop offset="25%" stop-color="#f6d365" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#fda085" stop-opacity="1" />
+      <stop offset="75%" stop-color="#fbc2eb" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fbc2eb" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Deep Background Glow -->
+    <radialGradient id="glowBack" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fda085" stop-opacity="0.15" />
+      <stop offset="60%" stop-color="#0b0f19" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f6d365" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Light -->
+  <rect x="0" y="0" width="850" height="200" fill="transparent" />
+  <ellipse cx="425" cy="100" rx="380" ry="80" fill="url(#glowBack)" />
+
+  <!-- Animated Calligraphy Content -->
+  <g class="name-group">
+    <!-- Star Sparkles -->
+    <!-- Left Star -->
+    <g transform="translate(140, 70)" class="sparkle">
+      <path d="M 0 -12 Q 0 0 12 0 Q 0 0 0 12 Q 0 0 -12 0 Q 0 0 0 -12 Z" fill="#ffd700" />
+    </g>
+    <!-- Right Star -->
+    <g transform="translate(710, 75)" class="sparkle-delay">
+      <path d="M 0 -10 Q 0 0 10 0 Q 0 0 0 10 Q 0 0 -10 0 Q 0 0 0 -10 Z" fill="#fbc2eb" />
+    </g>
+    <!-- Small accent sparkle -->
+    <g transform="translate(230, 45)" class="sparkle-delay">
+      <circle cx="0" cy="0" r="2.5" fill="#f6d365" />
+    </g>
+    <g transform="translate(620, 50)" class="sparkle">
+      <circle cx="0" cy="0" r="2.5" fill="#fda085" />
+    </g>
+
+    <!-- Name in Elegant Calligraphy -->
+    <text x="425" y="105" text-anchor="middle" class="calligraphy-name">Alankrita Paul</text>
+
+    <!-- Ornate Calligraphy Underline Swash -->
+    <path d="M 240 128 C 330 142, 380 132, 425 130 C 470 128, 520 142, 610 128 C 550 135, 470 133, 425 132 C 380 133, 300 135, 240 128 Z" fill="url(#goldGrad)" opacity="0.85" />
+    <circle cx="425" cy="131" r="3.5" fill="#ffd700" />
+
+    <!-- Tagline / Subtitle -->
+    <text x="425" y="165" text-anchor="middle" class="tagline">Code • Curiosity • Continuous Learning</text>
+  </g>
+
+  <!-- Bottom Accent Divider Line -->
+  <line x1="120" y1="192" x2="730" y2="192" stroke="url(#borderStroke)" stroke-width="1.5" />
+</svg>

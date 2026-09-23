@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe | Alankrita Paul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(22, 27, 44, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.4);
+      --secondary: #f43f5e;
+      --secondary-glow: rgba(244, 63, 94, 0.4);
+      --gold: #f6d365;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 20%, #151d36 0%, var(--bg) 80%);
+      color: #f1f5f9;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .signature-header {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, #fff1be 0%, #f6d365 40%, #fda085 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2px;
+      text-align: center;
+      filter: drop-shadow(0 4px 15px rgba(246, 211, 101, 0.3));
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .container {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      width: 100%;
+      max-width: 440px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .scoreboard {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      background: rgba(11, 15, 25, 0.8);
+      border-radius: 16px;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .score-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .score-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .score-name.x { color: var(--primary); }
+    .score-name.o { color: var(--secondary); }
+
+    .score-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
+    .vs-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .mode-select {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .mode-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .mode-btn.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(244, 63, 94, 0.2));
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .cell {
+      aspect-ratio: 1 / 1;
+      background: rgba(11, 15, 25, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      user-select: none;
+    }
+
+    .cell:hover:not(.taken) {
+      background: rgba(30, 41, 67, 0.6);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .cell.x {
+      color: var(--primary);
+      text-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .cell.o {
+      color: var(--secondary);
+      text-shadow: 0 0 20px var(--secondary-glow);
+    }
+
+    .cell.win-cell {
+      background: rgba(74, 222, 128, 0.15) !important;
+      border-color: #4ade80 !important;
+      animation: pulseWin 1s infinite alternate;
+    }
+
+    @keyframes pulseWin {
+      from { transform: scale(1); box-shadow: 0 0 10px rgba(74, 222, 128, 0.3); }
+      to { transform: scale(1.04); box-shadow: 0 0 25px rgba(74, 222, 128, 0.7); }
+    }
+
+    .status-msg {
+      font-size: 1.05rem;
+      font-weight: 600;
+      min-height: 28px;
+      margin-bottom: 18px;
+      color: #e2e8f0;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f43f5e 100%);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .reset-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(244, 63, 94, 0.4);
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signature-header">Alankrita Paul</div>
+  <div class="subtitle">Interactive Tic-Tac-Toe Arena</div>
+
+  <div class="container">
+    <div class="mode-select">
+      <button class="mode-btn active" id="modeAi" onclick="setMode('ai')">🤖 Play vs AI (Minimax)</button>
+      <button class="mode-btn" id="modePvp" onclick="setMode('pvp')">👥 2 Players</button>
+    </div>
+
+    <div class="scoreboard">
+      <div class="score-box">
+        <span class="score-name x" id="p1Label">Player X</span>
+        <span class="score-num" id="scoreX">0</span>
+      </div>
+      <div class="vs-pill">VS</div>
+      <div class="score-box">
+        <span class="score-name o" id="p2Label">AI (O)</span>
+        <span class="score-num" id="scoreO">0</span>
+      </div>
+    </div>
+
+    <div class="status-msg" id="statusMsg">Your turn! (Playing as X)</div>
+
+    <div class="board" id="board">
+      <div class="cell" data-index="0" onclick="handleCellClick(0)"></div>
+      <div class="cell" data-index="1" onclick="handleCellClick(1)"></div>
+      <div class="cell" data-index="2" onclick="handleCellClick(2)"></div>
+      <div class="cell" data-index="3" onclick="handleCellClick(3)"></div>
+      <div class="cell" data-index="4" onclick="handleCellClick(4)"></div>
+      <div class="cell" data-index="5" onclick="handleCellClick(5)"></div>
+      <div class="cell" data-index="6" onclick="handleCellClick(6)"></div>
+      <div class="cell" data-index="7" onclick="handleCellClick(7)"></div>
+      <div class="cell" data-index="8" onclick="handleCellClick(8)"></div>
+    </div>
+
+    <button class="reset-btn" onclick="resetGame()">↻ New Game</button>
+  </div>
+
+  <div class="footer">
+    Crafted for <a href="https://github.com/AlankritaPaul" target="_blank">@AlankritaPaul</a>'s GitHub
+  </div>
+
+  <script>
+    let board = Array(9).fill(null);
+    let currentPlayer = 'X';
+    let gameActive = true;
+    let gameMode = 'ai'; // 'ai' or 'pvp'
+    let scores = { X: 0, O: 0 };
+
+    const winPatterns = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Cols
+      [0, 4, 8], [2, 4, 6]             // Diagonals
+    ];
+
+    const statusMsg = document.getElementById('statusMsg');
+    const cells = document.querySelectorAll('.cell');
+
+    function setMode(mode) {
+      gameMode = mode;
+      document.getElementById('modeAi').classList.toggle('active', mode === 'ai');
+      document.getElementById('modePvp').classList.toggle('active', mode === 'pvp');
+      document.getElementById('p2Label').textContent = mode === 'ai' ? 'AI (O)' : 'Player O';
+      resetGame();
+    }
+
+    function handleCellClick(index) {
+      if (!gameActive || board[index] !== null) return;
+
+      makeMove(index, currentPlayer);
+
+      if (checkGameOver()) return;
+
+      if (gameMode === 'ai' && currentPlayer === 'O') {
+        statusMsg.textContent = 'AI is calculating move...';
+        setTimeout(makeAiMove, 350);
+      }
+    }
+
+    function makeMove(index, player) {
+      board[index] = player;
+      const cell = cells[index];
+      cell.textContent = player;
+      cell.classList.add(player.toLowerCase(), 'taken');
+
+      currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+      statusMsg.textContent = `Turn: Player ${currentPlayer}`;
+    }
+
+    function checkGameOver() {
+      const winnerData = checkWinner(board);
+
+      if (winnerData) {
+        gameActive = false;
+        scores[winnerData.winner]++;
+        document.getElementById(`score${winnerData.winner}`).textContent = scores[winnerData.winner];
+        
+        winnerData.pattern.forEach(idx => cells[idx].classList.add('win-cell'));
+        statusMsg.textContent = `🎉 Player ${winnerData.winner} Wins!`;
+
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+        return true;
+      }
+
+      if (board.every(cell => cell !== null)) {
+        gameActive = false;
+        statusMsg.textContent = "🤝 It's a Draw!";
+        return true;
+      }
+
+      return false;
+    }
+
+    function checkWinner(bd) {
+      for (const pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (bd[a] && bd[a] === bd[b] && bd[a] === bd[c]) {
+          return { winner: bd[a], pattern };
+        }
+      }
+      return null;
+    }
+
+    // Minimax AI
+    function makeAiMove() {
+      if (!gameActive) return;
+      const bestMove = getBestMove(board);
+      makeMove(bestMove, 'O');
+      checkGameOver();
+    }
+
+    function getBestMove(currentBoard) {
+      let bestScore = -Infinity;
+      let move = -1;
+
+      // Center preference if open
+      if (currentBoard[4] === null && Math.random() > 0.1) return 4;
+
+      for (let i = 0; i < 9; i++) {
+        if (currentBoard[i] === null) {
+          currentBoard[i] = 'O';
+          let score = minimax(currentBoard, 0, false);
+          currentBoard[i] = null;
+          if (score > bestScore) {
+            bestScore = score;
+            move = i;
+          }
+        }
+      }
+      return move;
+    }
+
+    function minimax(currBd, depth, isMaximizing) {
+      const result = checkWinner(currBd);
+      if (result) {
+        return result.winner === 'O' ? 10 - depth : depth - 10;
+      }
+      if (currBd.every(c => c !== null)) return 0;
+
+      if (isMaximizing) {
+        let best = -Infinity;
+        for (let i = 0; i < 9; i++) {
+          if (currBd[i] === null) {
+            currBd[i] = 'O';
+            best = Math.max(best, minimax(currBd, depth + 1, false));
+            currBd[i] = null;
+          }
+        }
+        return best;
+      } else {
+        let best = Infinity;
+        for (let i = 0; i < 9; i++) {
+          if (currBd[i] === null) {
+            currBd[i] = 'X';
+            best = Math.min(best, minimax(currBd, depth + 1, true));
+            currBd[i] = null;
+          }
+        }
+        return best;
+      }
+    }
+
+    function resetGame() {
+      board = Array(9).fill(null);
+      currentPlayer = 'X';
+      gameActive = true;
+      cells.forEach(cell => {
+        cell.textContent = '';
+        cell.className = 'cell';
+      });
+      statusMsg.textContent = 'Your turn! (Playing as X)';
+    }
+  </script>
+</body>
+</html>
