@@ -44,5 +44,5 @@
 ---
 
 <p align="center">
-  <i>"Code. Curiosity. Continuous Learning." — Alankrita Paul</i>
+  <i>"Learning by Building" — Alankrita Paul</i>
 </p>
