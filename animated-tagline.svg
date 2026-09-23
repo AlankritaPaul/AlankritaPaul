@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="80">
   <defs>
-    <!-- Deep Bottle Green Background -->
-    <linearGradient id="tagBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#041812" />
-      <stop offset="50%" stop-color="#0b2c21" />
-      <stop offset="100%" stop-color="#061f18" />
+    <!-- Midnight Obsidian / Sapphire Background (Distinct from Bottle Green) -->
+    <linearGradient id="midnightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c18" />
+      <stop offset="50%" stop-color="#0d1b30" />
+      <stop offset="100%" stop-color="#07101f" />
     </linearGradient>
 
-    <!-- Subtle Gold/Emerald Border -->
-    <linearGradient id="tagBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
-      <stop offset="50%" stop-color="#f6d365" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.4" />
+    <!-- Electric Cyan to Gold Border Gradient -->
+    <linearGradient id="cyanGoldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#f6d365" stop-opacity="0.8" />
     </linearGradient>
 
-    <!-- Crisp Subtle Shadow (No Deep Muddy Blur) -->
-    <filter id="crispTagShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5" />
+    <!-- Crisp Text Drop Shadow -->
+    <filter id="tagTextShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.6" />
     </filter>
   </defs>
 
@@ -48,7 +48,7 @@
       font-size: 28px;
       letter-spacing: 3.5px;
       fill: #ff6b9d;
-      filter: url(#crispTagShadow);
+      filter: url(#tagTextShadow);
       animation: showPhrase1 9s infinite ease-in-out;
     }
 
@@ -59,7 +59,7 @@
       font-weight: 800;
       letter-spacing: 5px;
       fill: #38bdf8;
-      filter: url(#crispTagShadow);
+      filter: url(#tagTextShadow);
       animation: showPhrase2 9s infinite ease-in-out;
     }
 
@@ -70,13 +70,13 @@
       font-weight: 800;
       letter-spacing: 4.5px;
       fill: #fde047;
-      filter: url(#crispTagShadow);
+      filter: url(#tagTextShadow);
       animation: showPhrase3 9s infinite ease-in-out;
     }
   ]]></style>
 
-  <!-- Deep Bottle Green Background Box (Works on Both Light & Dark Modes) -->
-  <rect x="2" y="2" width="896" height="76" rx="16" fill="url(#tagBg)" stroke="url(#tagBorder)" stroke-width="1.8" />
+  <!-- Midnight Obsidian / Sapphire Background Box (Distinct from Bottle Green Box) -->
+  <rect x="2" y="2" width="896" height="76" rx="14" fill="url(#midnightBg)" stroke="url(#cyanGoldBorder)" stroke-width="2" />
 
   <!-- Phrase 1: Creating my Own Identity -->
   <text x="450" y="50" text-anchor="middle" class="phrase-1">
