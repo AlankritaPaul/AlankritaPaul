@@ -3,38 +3,27 @@
   <img src="calligraphy-name.svg" alt="Alankrita Paul Calligraphy Header" width="100%" />
 </p>
 
-<!-- Dynamic Animated Typing Subtitle (Distinct Non-Calligraphy Style, Electric Cyan) -->
+<!-- Dynamic Animated Rotating Subtitles (Distinct Styles & Vibrant Colors) -->
 <p align="center">
-  <a href="https://github.com/AlankritaPaul">
-    <img src="https://readme-typing-svg.demolab.com?font=Righteous&size=26&pause=1200&color=38BDF8&center=true&vCenter=true&width=650&height=50&lines=Creating+my+Own+Identity;Made+To+Be+Different;Code.+Curiosity.+Continuous+Learning." alt="Typing SVG" />
-  </a>
+  <img src="animated-tagline.svg" alt="Animated Taglines" width="100%" />
 </p>
 
 ---
 
-<!-- Live Tic-Tac-Toe Game (Header removed, game kept) -->
+<!-- Live Tic-Tac-Toe Game (Keeping the game only) -->
 <p align="center">
-  <img src="tic-tac-toe.svg" alt="Live Autoplaying Tic-Tac-Toe" width="580px" />
-</p>
-
-<p align="center">
-  <a href="https://alankritapaul.github.io/AlankritaPaul/" target="_blank">
-    <img src="https://img.shields.io/badge/🎮%20PLAY%20INTERACTIVE%20GAME%20IN%20BROWSER-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Play Live In Browser" />
-  </a>
-  <a href="https://github.com/AlankritaPaul">
-    <img src="https://img.shields.io/badge/⚡%20ENGINE-MINIMAX%20AI-F43F5E?style=for-the-badge&logo=powershell&logoColor=white" alt="Minimax AI Engine" />
-  </a>
+  <img src="tic-tac-toe.svg" alt="Live Autoplaying Tic-Tac-Toe Game" width="580px" />
 </p>
 
 ---
 
-<!-- Programmer Dialogue Reality Check -->
+<!-- Programmer Dialogue / Reality Check -->
 <div align="center">
 
-> ### 💭 Reality Check
+> ### 💭 Reality Check:
 > **What happens when code runs on the first try?**  
-> **Ans —** We don't ask question.  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**We Celebrate.** 🥂
+> **Ans —** We don't debug it.  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**We Commit and Push before it Change.** 🚀
 </div>
 
 ---

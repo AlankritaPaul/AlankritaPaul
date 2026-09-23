@@ -1,165 +1,174 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="100%" height="250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Righteous&amp;family=Cinzel:wght@600;800&amp;display=swap');
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Righteous&family=Cinzel:wght@700;800&display=swap');
 
-      /* Calligraphy Name */
+      /* 1. Name: Luxury Calligraphy */
       .calligraphy-name {
-        font-family: 'Great Vibes', 'Alex Brush', 'Brush Script MT', cursive;
-        font-size: 78px;
+        font-family: 'Great Vibes', 'Alex Brush', 'Dancing Script', cursive;
+        font-size: 82px;
         font-weight: 400;
         fill: url(#goldGrad);
-        filter: url(#nameShadow);
+        filter: url(#nameGlow);
         letter-spacing: 2px;
       }
 
-      /* Distinct Subtitle 1: Made To Be Different */
-      .diff-title {
+      /* 2. Made To Be Different: Modern Futuristic Distinct Style & Electric Neon Cyan-Purple Color */
+      .title-different {
         font-family: 'Righteous', -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: 21px;
-        letter-spacing: 7px;
+        font-size: 22px;
+        letter-spacing: 8px;
         text-transform: uppercase;
-        fill: url(#cyanPinkGrad);
-        filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.45));
+        fill: url(#neonCyanPurple);
+        filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.5));
       }
 
-      /* Distinct Subtitle 2: Code Curiosity Continuous Learning */
-      .code-tagline {
+      /* 3. Code Curiosity Continuous Learning: Luxury Roman Serif Style & Radiant Sunset Peach Color */
+      .title-code {
         font-family: 'Cinzel', Georgia, serif;
-        font-size: 13.5px;
-        font-weight: 700;
-        letter-spacing: 5px;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 6px;
         text-transform: uppercase;
-        fill: #e2e8f0;
+        fill: url(#sunsetCoral);
+        filter: drop-shadow(0 0 8px rgba(255, 107, 107, 0.4));
       }
 
-      /* Animated Gold Infinity */
+      /* Animated Golden Infinity */
       @keyframes infinityFlow {
         0% { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: -160; }
+        100% { stroke-dashoffset: -180; }
       }
-      @keyframes infinityGlow {
+      @keyframes infinityPulse {
         0%, 100% {
-          filter: drop-shadow(0 0 4px #ffd700) drop-shadow(0 0 10px rgba(245, 158, 11, 0.6));
+          filter: drop-shadow(0 0 5px #ffd700) drop-shadow(0 0 12px rgba(245, 158, 11, 0.8));
           transform: scale(1);
         }
         50% {
-          filter: drop-shadow(0 0 9px #fff1be) drop-shadow(0 0 18px rgba(251, 191, 36, 0.9));
-          transform: scale(1.1);
+          filter: drop-shadow(0 0 12px #fff5b8) drop-shadow(0 0 24px rgba(251, 191, 36, 1));
+          transform: scale(1.14);
         }
       }
-      .animated-infinity {
-        stroke-dasharray: 24 8;
-        animation: infinityFlow 3s linear infinite, infinityGlow 3s ease-in-out infinite;
+      .golden-infinity {
+        stroke-dasharray: 22 7;
+        animation: infinityFlow 2.8s linear infinite, infinityPulse 3s ease-in-out infinite;
         transform-origin: 0 0;
       }
 
-      /* Sparkles */
+      /* Ambient Twinkling Stars */
       .sparkle { animation: twinkle 3s infinite ease-in-out; }
       .sparkle-delay { animation: twinkle 3s infinite ease-in-out 1.5s; }
 
       @keyframes twinkle {
-        0%, 100% { opacity: 0.25; transform: scale(0.7); }
-        50% { opacity: 1; transform: scale(1.25); }
+        0%, 100% { opacity: 0.2; transform: scale(0.7); }
+        50% { opacity: 1; transform: scale(1.3); }
       }
 
-      @keyframes floatGroup {
+      @keyframes floatSoft {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-3px); }
+        50% { transform: translateY(-4px); }
       }
-      .main-group {
-        animation: floatGroup 6s ease-in-out infinite;
+      .banner-group {
+        animation: floatSoft 6s ease-in-out infinite;
       }
-    </style>
+    ]]></style>
 
-    <!-- Metallic Gold Gradient -->
+    <!-- Metallic 24K Gold Gradient for Calligraphy Name -->
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff7cd" />
-      <stop offset="30%" stop-color="#f6d365" />
-      <stop offset="70%" stop-color="#fda085" />
+      <stop offset="0%" stop-color="#fff8d6" />
+      <stop offset="25%" stop-color="#f6d365" />
+      <stop offset="65%" stop-color="#fda085" />
       <stop offset="100%" stop-color="#fbc2eb" />
     </linearGradient>
 
-    <!-- Vibrant Cyan to Pink Gradient -->
-    <linearGradient id="cyanPinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#c084fc" />
+    <!-- Golden Infinity Gradient -->
+    <linearGradient id="infinityGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="30%" stop-color="#fde047" />
+      <stop offset="70%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Distinct Color 1: Electric Neon Cyan to Magenta -->
+    <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
       <stop offset="100%" stop-color="#f43f5e" />
     </linearGradient>
 
-    <!-- Infinity Stroke Gold Gradient -->
-    <linearGradient id="infinityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff1be" />
-      <stop offset="50%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#f59e0b" />
+    <!-- Distinct Color 2: Luminous Sunset Coral to Peach -->
+    <linearGradient id="sunsetCoral" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd269" />
+      <stop offset="50%" stop-color="#ff9a8b" />
+      <stop offset="100%" stop-color="#ff6a88" />
     </linearGradient>
 
-    <!-- Divider Border Gradient -->
-    <linearGradient id="borderStroke" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#c084fc" stop-opacity="1" />
-      <stop offset="75%" stop-color="#f43f5e" stop-opacity="0.8" />
+    <!-- Bottom Border Accent Gradient -->
+    <linearGradient id="borderAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="1" />
+      <stop offset="80%" stop-color="#f43f5e" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#f43f5e" stop-opacity="0" />
     </linearGradient>
 
-    <!-- Deep Ambient Glow -->
-    <radialGradient id="glowBack" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fda085" stop-opacity="0.14" />
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.06" />
+    <!-- Radial Background Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.06" />
       <stop offset="100%" stop-color="#0b0f19" stop-opacity="0" />
     </radialGradient>
 
-    <filter id="nameShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f6d365" flood-opacity="0.35" />
+    <filter id="nameGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f6d365" flood-opacity="0.4" />
     </filter>
   </defs>
 
   <!-- Ambient Light -->
-  <rect x="0" y="0" width="850" height="250" fill="transparent" />
-  <ellipse cx="425" cy="120" rx="390" ry="100" fill="url(#glowBack)" />
+  <rect x="0" y="0" width="850" height="260" fill="transparent" />
+  <ellipse cx="425" cy="130" rx="400" ry="110" fill="url(#ambientGlow)" />
 
-  <g class="main-group">
+  <g class="banner-group">
     <!-- Star Sparkles -->
-    <g transform="translate(130, 65)" class="sparkle">
-      <path d="M 0 -13 Q 0 0 13 0 Q 0 0 0 13 Q 0 0 -13 0 Q 0 0 0 -13 Z" fill="#ffd700" />
+    <g transform="translate(120, 68)" class="sparkle">
+      <path d="M 0 -14 Q 0 0 14 0 Q 0 0 0 14 Q 0 0 -14 0 Q 0 0 0 -14 Z" fill="#ffd700" />
     </g>
-    <g transform="translate(720, 70)" class="sparkle-delay">
-      <path d="M 0 -11 Q 0 0 11 0 Q 0 0 0 11 Q 0 0 -11 0 Q 0 0 0 -11 Z" fill="#fbc2eb" />
+    <g transform="translate(730, 72)" class="sparkle-delay">
+      <path d="M 0 -12 Q 0 0 12 0 Q 0 0 0 12 Q 0 0 -12 0 Q 0 0 0 -12 Z" fill="#00f2fe" />
     </g>
-    <g transform="translate(210, 38)" class="sparkle-delay">
-      <circle cx="0" cy="0" r="2.5" fill="#38bdf8" />
+    <g transform="translate(200, 38)" class="sparkle-delay">
+      <circle cx="0" cy="0" r="3" fill="#f43f5e" />
     </g>
-    <g transform="translate(640, 42)" class="sparkle">
-      <circle cx="0" cy="0" r="2.5" fill="#f43f5e" />
+    <g transform="translate(650, 42)" class="sparkle">
+      <circle cx="0" cy="0" r="3" fill="#fde047" />
     </g>
 
-    <!-- 1. Name in Calligraphy -->
-    <text x="425" y="92" text-anchor="middle" class="calligraphy-name">Alankrita Paul</text>
+    <!-- 1. Name in Luxury Calligraphy -->
+    <text x="425" y="94" text-anchor="middle" class="calligraphy-name">Alankrita Paul</text>
 
-    <!-- 2. Ornate Calligraphy Swash Underline -->
-    <path d="M 230 112 C 320 124, 380 115, 425 113 C 470 111, 530 124, 620 112 C 560 118, 470 115, 425 114 C 380 115, 290 118, 230 112 Z" fill="url(#goldGrad)" opacity="0.85" />
+    <!-- 2. Calligraphy Swash Flourish -->
+    <path d="M 220 114 C 310 126, 370 117, 425 115 C 480 113, 540 126, 630 114 C 570 120, 480 117, 425 116 C 370 117, 280 120, 220 114 Z" fill="url(#goldGrad)" opacity="0.85" />
 
-    <!-- 3. Animated Golden Colour Infinity (Centered) -->
-    <g transform="translate(425, 138)">
-      <path d="M 0 0 C 14 -16, 38 -16, 38 0 C 38 16, 14 16, 0 0 C -14 -16, -38 -16, -38 0 C -38 16, -14 16, 0 0 Z"
+    <!-- 3. Animated Golden Colour Infinity (Centered prominently below name) -->
+    <g transform="translate(425, 142)">
+      <path d="M 0 0 C 16 -18, 44 -18, 44 0 C 44 18, 16 18, 0 0 C -16 -18, -44 -18, -44 0 C -44 18, -16 18, 0 0 Z"
             fill="none"
-            stroke="url(#infinityGrad)"
-            stroke-width="3.5"
+            stroke="url(#infinityGold)"
+            stroke-width="4"
             stroke-linecap="round"
-            class="animated-infinity" />
-      <circle cx="0" cy="0" r="2" fill="#fff7cd" />
+            class="golden-infinity" />
+      <circle cx="0" cy="0" r="2.5" fill="#fffbeb" />
     </g>
 
-    <!-- 4. "Made To Be Different" - Distinct Modern Bold Style & Color -->
-    <text x="425" y="186" text-anchor="middle" class="diff-title">✨ MADE TO BE DIFFERENT ✨</text>
+    <!-- 4. "MADE TO BE DIFFERENT" - Distinct Modern Futuristic Style & Vibrant Cyan/Pink Color -->
+    <text x="425" y="194" text-anchor="middle" class="title-different">MADE TO BE DIFFERENT</text>
 
-    <!-- 5. "Code • Curiosity • Continuous Learning" - Distinct Regal Style & Color -->
-    <text x="425" y="218" text-anchor="middle" class="code-tagline">
-      CODE <tspan fill="#f6d365">•</tspan> CURIOSITY <tspan fill="#f6d365">•</tspan> CONTINUOUS LEARNING
+    <!-- 5. "CODE • CURIOSITY • CONTINUOUS LEARNING" - Distinct Roman Serif Style & Radiant Coral Color -->
+    <text x="425" y="226" text-anchor="middle" class="title-code">
+      CODE <tspan fill="#ffd700">✦</tspan> CURIOSITY <tspan fill="#ffd700">✦</tspan> CONTINUOUS LEARNING
     </text>
   </g>
 
-  <!-- Bottom Accent Divider Line -->
-  <line x1="120" y1="242" x2="730" y2="242" stroke="url(#borderStroke)" stroke-width="1.8" />
+  <!-- Bottom Accent Line -->
+  <line x1="100" y1="252" x2="750" y2="252" stroke="url(#borderAccent)" stroke-width="2" />
 </svg>
