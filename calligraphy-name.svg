@@ -79,18 +79,21 @@
       filter: url(#crispDrop);
     }
 
-    /* 3. Animated Monospace Off-White Infinity Flow & Glow */
-    @keyframes infinityFlow {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: -180; }
+    /* 3. Appropriate Single Continuous Line Off-White Infinity Animation */
+    @keyframes singleInfinityGlow {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2.5px rgba(248, 250, 252, 0.7));
+        opacity: 0.92;
+      }
+      50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1)) drop-shadow(0 0 16px rgba(248, 250, 252, 0.5));
+        opacity: 1;
+      }
     }
-    @keyframes infinityPulse {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 3px #f8fafc); }
-      50% { transform: scale(1.12); filter: drop-shadow(0 0 8px #ffffff); }
-    }
-    .offwhite-infinity {
-      stroke-dasharray: 22 7;
-      animation: infinityFlow 2.8s linear infinite, infinityPulse 3s ease-in-out infinite;
+    .single-line-infinity {
+      animation: singleInfinityGlow 3s ease-in-out infinite;
       transform-origin: 0 0;
     }
 
@@ -135,15 +138,15 @@
     <!-- 2. Gold Accent Swash -->
     <path d="M 180 112 C 300 122, 380 116, 450 114 C 520 112, 600 122, 720 112 C 650 117, 520 115, 450 115 C 380 115, 250 117, 180 112 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Animated Monospace Off-White Infinity Symbol -->
+    <!-- 3. Appropriate Single Continuous Line Off-White Infinity Symbol -->
     <g transform="translate(450, 142)">
       <path d="M 0 0 C 18 -20, 46 -20, 46 0 C 46 20, 18 20, 0 0 C -18 -20, -46 -20, -46 0 C -46 20, -18 20, 0 0 Z"
             fill="none"
             stroke="url(#infinityOffWhite)"
-            stroke-width="4.5"
+            stroke-width="3.8"
             stroke-linecap="round"
-            class="offwhite-infinity" />
-      <circle cx="0" cy="0" r="2.5" fill="#f8fafc" />
+            stroke-linejoin="round"
+            class="single-line-infinity" />
     </g>
 
     <!-- 4. 'MADE TO BE DIFFERENT' in Modern Luxury Typography -->
