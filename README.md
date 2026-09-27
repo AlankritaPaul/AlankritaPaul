@@ -1,6 +1,6 @@
-<!-- Calligraphy Header Banner -->
+<!-- Developer Header Banner -->
 <p align="center">
-  <img src="calligraphy-name.svg" alt="Alankrita Paul Calligraphy Header" width="100%" />
+  <img src="calligraphy-name.svg" alt="Alankrita Paul Developer Header" width="100%" />
 </p>
 
 <!-- Dynamic Animated Unique Taglines -->
