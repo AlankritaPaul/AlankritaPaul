@@ -79,38 +79,53 @@
       filter: url(#crispDrop);
     }
 
-    /* 3. Natural Pen-Drawing Infinity Animation (Draws continuously from center, rests whole, loops smoothly) */
-    @keyframes drawInfinity {
-      0% {
-        stroke-dashoffset: 300;
-        opacity: 0;
-      }
-      3% {
-        stroke-dashoffset: 300;
-        opacity: 1;
-      }
-      50% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-      }
-      78% {
-        stroke-dashoffset: 0;
-        opacity: 1;
-      }
-      92% {
-        stroke-dashoffset: 0;
-        opacity: 0;
-      }
-      100% {
-        stroke-dashoffset: 300;
-        opacity: 0;
-      }
+            /* 3. Natural Pen-Drawing Calligraphy Infinity (One side bold, another thin, pen drawing animation) */
+    @keyframes drawBase {
+      0% { stroke-dashoffset: 300; opacity: 0; }
+      2% { stroke-dashoffset: 300; opacity: 1; }
+      50% { stroke-dashoffset: 0; opacity: 1; }
+      78% { stroke-dashoffset: 0; opacity: 1; }
+      90% { stroke-dashoffset: 0; opacity: 0; }
+      100% { stroke-dashoffset: 300; opacity: 0; }
     }
-    .drawing-infinity {
+
+    @keyframes drawRightBold {
+      0% { stroke-dashoffset: 150; opacity: 0; }
+      2% { stroke-dashoffset: 150; opacity: 1; }
+      25% { stroke-dashoffset: 0; opacity: 1; }
+      78% { stroke-dashoffset: 0; opacity: 1; }
+      90% { stroke-dashoffset: 0; opacity: 0; }
+      100% { stroke-dashoffset: 150; opacity: 0; }
+    }
+
+    @keyframes drawLeftTop {
+      0%, 24% { stroke-dashoffset: 80; opacity: 0; }
+      25% { stroke-dashoffset: 80; opacity: 1; }
+      38% { stroke-dashoffset: 0; opacity: 1; }
+      78% { stroke-dashoffset: 0; opacity: 1; }
+      90% { stroke-dashoffset: 0; opacity: 0; }
+      100% { stroke-dashoffset: 80; opacity: 0; }
+    }
+
+    .anim-base {
       stroke-dasharray: 300;
       stroke-dashoffset: 300;
-      animation: drawInfinity 5s ease-in-out infinite;
-      transform-origin: 0 0;
+      animation: drawBase 5.5s ease-in-out infinite both;
+      opacity: 0;
+    }
+
+    .anim-right-bold {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: drawRightBold 5.5s ease-in-out infinite both;
+      opacity: 0;
+    }
+
+    .anim-left-top {
+      stroke-dasharray: 80;
+      stroke-dashoffset: 80;
+      animation: drawLeftTop 5.5s ease-in-out infinite both;
+      opacity: 0;
     }
 
     /* Sparkles */
@@ -154,17 +169,22 @@
     <!-- 2. Gold Accent Swash -->
     <path d="M 180 112 C 300 122, 380 116, 450 114 C 520 112, 600 122, 720 112 C 650 117, 520 115, 450 115 C 380 115, 250 117, 180 112 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Natural Pen-Drawing Single Line Off-White Infinity Symbol -->
-    <g transform="translate(450, 142)">
+                <!-- 3. Natural Pen-Drawing Calligraphy Infinity (Bold on right, thin on left, Off-White, No Background) -->
+    <g transform="translate(450, 142)" filter="drop-shadow(0 0 3px rgba(255,255,255,0.9)) drop-shadow(0 0 8px rgba(248,250,252,0.5))">
+      <!-- Full Base Loop (creates the continuous loop and the thin hairline curve at bottom-left) -->
       <path d="M 0 0 C 18 -22, 54 -22, 54 0 C 54 22, 18 22, 0 0 C -18 -22, -54 -22, -54 0 C -54 22, -18 22, 0 0 Z"
-            fill="none"
-            stroke="url(#infinityOffWhite)"
-            stroke-width="4.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            pathLength="300"
-            class="drawing-infinity"
-            filter="drop-shadow(0 0 3px rgba(255,255,255,0.85)) drop-shadow(0 0 8px rgba(248,250,252,0.5))" />
+            fill="none" stroke="url(#infinityOffWhite)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+            pathLength="300" class="anim-base" />
+
+      <!-- Medium Left-Top Curve Overlay -->
+      <path d="M 0 0 C -18 -22, -54 -22, -54 0"
+            fill="none" stroke="url(#infinityOffWhite)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+            pathLength="80" class="anim-left-top" />
+
+      <!-- Bold Right Loop Overlay -->
+      <path d="M 0 0 C 18 -22, 54 -22, 54 0 C 54 22, 18 22, 0 0"
+            fill="none" stroke="url(#infinityOffWhite)" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"
+            pathLength="150" class="anim-right-bold" />
     </g>
 
     <!-- 4. 'MADE TO BE DIFFERENT' in Modern Luxury Typography -->
