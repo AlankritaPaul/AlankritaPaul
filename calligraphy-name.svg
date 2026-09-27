@@ -9,11 +9,11 @@
       <stop offset="100%" stop-color="#b45309" />
     </linearGradient>
 
-    <!-- Infinity Golden Gradient -->
-    <linearGradient id="infinityGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" />
-      <stop offset="50%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#d97706" />
+    <!-- Off-White Luminous Infinity Gradient -->
+    <linearGradient id="infinityOffWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
     </linearGradient>
 
     <!-- Bottom Accent Divider Gradient -->
@@ -79,16 +79,16 @@
       filter: url(#crispDrop);
     }
 
-    /* Animated Gold Infinity */
+    /* 3. Animated Monospace Off-White Infinity Flow & Glow */
     @keyframes infinityFlow {
       0% { stroke-dashoffset: 0; }
       100% { stroke-dashoffset: -180; }
     }
     @keyframes infinityPulse {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 3px #f59e0b); }
-      50% { transform: scale(1.12); filter: drop-shadow(0 0 8px #fbbf24); }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 3px #f8fafc); }
+      50% { transform: scale(1.12); filter: drop-shadow(0 0 8px #ffffff); }
     }
-    .golden-infinity {
+    .offwhite-infinity {
       stroke-dasharray: 22 7;
       animation: infinityFlow 2.8s linear infinite, infinityPulse 3s ease-in-out infinite;
       transform-origin: 0 0;
@@ -97,7 +97,7 @@
     /* Sparkles */
     @keyframes twinkle {
       0%, 100% { opacity: 0.25; transform: scale(0.8); }
-      50% { transform: scale(1.2); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
     .sparkle { animation: twinkle 3s infinite ease-in-out; }
     .sparkle-delay { animation: twinkle 3s infinite ease-in-out 1.5s; }
@@ -135,15 +135,15 @@
     <!-- 2. Gold Accent Swash -->
     <path d="M 180 112 C 300 122, 380 116, 450 114 C 520 112, 600 122, 720 112 C 650 117, 520 115, 450 115 C 380 115, 250 117, 180 112 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Animated Golden Infinity Symbol -->
+    <!-- 3. Animated Monospace Off-White Infinity Symbol -->
     <g transform="translate(450, 142)">
       <path d="M 0 0 C 18 -20, 46 -20, 46 0 C 46 20, 18 20, 0 0 C -18 -20, -46 -20, -46 0 C -46 20, -18 20, 0 0 Z"
             fill="none"
-            stroke="url(#infinityGold)"
+            stroke="url(#infinityOffWhite)"
             stroke-width="4.5"
             stroke-linecap="round"
-            class="golden-infinity" />
-      <circle cx="0" cy="0" r="2.5" fill="#f59e0b" />
+            class="offwhite-infinity" />
+      <circle cx="0" cy="0" r="2.5" fill="#f8fafc" />
     </g>
 
     <!-- 4. 'MADE TO BE DIFFERENT' in Modern Luxury Typography -->
