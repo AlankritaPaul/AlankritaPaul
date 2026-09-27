@@ -9,7 +9,7 @@
       <stop offset="100%" stop-color="#b45309" />
     </linearGradient>
 
-    <!-- Off-White Luminous Infinity Gradient -->
+    <!-- Off-White Infinity Linear Gradient -->
     <linearGradient id="infinityOffWhite" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fafc" />
       <stop offset="50%" stop-color="#ffffff" />
@@ -79,21 +79,23 @@
       filter: url(#crispDrop);
     }
 
-    /* 3. Appropriate Single Continuous Line Off-White Infinity Animation */
-    @keyframes singleInfinityGlow {
+    /* 3. Animated Calligraphy Ribbon Infinity (Exact Image 2 Style, Off-White, Transparent Background) */
+    @keyframes ribbonPulse {
       0%, 100% {
         transform: scale(1);
-        filter: drop-shadow(0 0 2.5px rgba(248, 250, 252, 0.7));
+        filter: drop-shadow(0 0 3px rgba(248, 250, 252, 0.7));
         opacity: 0.92;
       }
       50% {
         transform: scale(1.08);
-        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1)) drop-shadow(0 0 16px rgba(248, 250, 252, 0.5));
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) drop-shadow(0 0 20px rgba(248, 250, 252, 0.5));
         opacity: 1;
       }
     }
-    .single-line-infinity {
-      animation: singleInfinityGlow 3s ease-in-out infinite;
+    .calligraphy-ribbon-infinity {
+      fill: url(#infinityOffWhite);
+      fill-rule: evenodd;
+      animation: ribbonPulse 3s ease-in-out infinite;
       transform-origin: 0 0;
     }
 
@@ -138,15 +140,9 @@
     <!-- 2. Gold Accent Swash -->
     <path d="M 180 112 C 300 122, 380 116, 450 114 C 520 112, 600 122, 720 112 C 650 117, 520 115, 450 115 C 380 115, 250 117, 180 112 Z" fill="url(#textGold)" opacity="0.9" />
 
-    <!-- 3. Appropriate Single Continuous Line Off-White Infinity Symbol -->
-    <g transform="translate(450, 142)">
-      <path d="M 0 0 C 18 -20, 46 -20, 46 0 C 46 20, 18 20, 0 0 C -18 -20, -46 -20, -46 0 C -46 20, -18 20, 0 0 Z"
-            fill="none"
-            stroke="url(#infinityOffWhite)"
-            stroke-width="3.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="single-line-infinity" />
+    <!-- 3. Animated Calligraphy Ribbon Infinity (Exact Image 2 Style, Off-White, No Background) -->
+    <g transform="translate(450, 144)">
+      <path d="M 55.65 -4.59 L 52.82 -12.37 L 48.23 -18.02 L 41.51 -22.26 L 35.86 -24.03 L 27.38 -24.38 L 17.84 -21.55 L 9.36 -15.90 L -1.59 -4.59 L -11.48 -15.55 L -17.49 -20.14 L -24.91 -23.32 L -34.09 -24.03 L -45.05 -20.49 L -51.05 -15.19 L -55.29 -7.07 L -56.00 2.12 L -54.23 8.48 L -51.41 13.43 L -43.99 19.79 L -37.98 22.26 L -27.74 22.61 L -19.26 19.43 L -10.78 13.07 L -1.94 2.12 L -0.88 2.12 L 6.54 11.66 L 15.72 19.79 L 23.14 23.32 L 34.45 24.03 L 43.99 20.85 L 51.05 14.49 L 55.29 5.30 Z M 28.44 -18.37 L 35.15 -18.02 L 39.75 -16.61 L 42.93 -14.84 L 47.52 -10.25 L 49.64 -6.01 L 50.35 -3.18 L 50.35 3.18 L 49.99 4.95 L 47.17 11.31 L 42.22 16.25 L 37.27 18.73 L 34.45 19.43 L 31.27 19.79 L 25.62 19.43 L 18.55 16.61 L 12.54 12.01 L 9.01 8.48 L 3.36 1.77 L 3.36 1.06 L 7.24 -4.24 L 15.37 -12.37 L 21.38 -16.25 Z M -37.63 -20.85 L -28.09 -21.20 L -21.02 -18.73 L -17.14 -16.25 L -10.78 -10.25 L -1.94 0.71 L -1.94 2.12 L -12.90 14.13 L -19.61 18.73 L -25.97 21.20 L -31.62 21.91 L -35.51 21.55 L -42.57 19.08 L -46.11 16.61 L -49.64 13.07 L -52.11 9.19 L -53.88 3.53 L -54.23 -1.06 L -52.82 -7.77 L -49.64 -13.43 L -46.46 -16.61 L -41.87 -19.43 Z " class="calligraphy-ribbon-infinity" />
     </g>
 
     <!-- 4. 'MADE TO BE DIFFERENT' in Modern Luxury Typography -->
