@@ -14,22 +14,28 @@
       filter: url(#crispTagDrop);
     }
 
-    /* Total Cycle: 9s (3s per phrase) */
+    /* Total Cycle: 12s (3s per phrase) */
     @keyframes showPhrase1 {
-      0%, 30% { opacity: 1; transform: translateY(0px) scale(1); }
-      33%, 97% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+      0%, 22% { opacity: 1; transform: translateY(0px) scale(1); }
+      25%, 97% { opacity: 0; transform: translateY(-12px) scale(0.96); }
       100% { opacity: 1; transform: translateY(0px) scale(1); }
     }
 
     @keyframes showPhrase2 {
-      0%, 30% { opacity: 0; transform: translateY(12px) scale(0.96); }
-      33%, 63% { opacity: 1; transform: translateY(0px) scale(1); }
-      66%, 100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+      0%, 22% { opacity: 0; transform: translateY(12px) scale(0.96); }
+      25%, 47% { opacity: 1; transform: translateY(0px) scale(1); }
+      50%, 100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
     }
 
     @keyframes showPhrase3 {
-      0%, 63% { opacity: 0; transform: translateY(12px) scale(0.96); }
-      66%, 96% { opacity: 1; transform: translateY(0px) scale(1); }
+      0%, 47% { opacity: 0; transform: translateY(12px) scale(0.96); }
+      50%, 72% { opacity: 1; transform: translateY(0px) scale(1); }
+      75%, 100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
+    }
+
+    @keyframes showPhrase4 {
+      0%, 72% { opacity: 0; transform: translateY(12px) scale(0.96); }
+      75%, 97% { opacity: 1; transform: translateY(0px) scale(1); }
       100% { opacity: 0; transform: translateY(-12px) scale(0.96); }
     }
 
@@ -37,21 +43,28 @@
     .phrase-1 {
       font-size: 24px;
       fill: #f43f5e;
-      animation: showPhrase1 9s infinite ease-in-out;
+      animation: showPhrase1 12s infinite ease-in-out;
     }
 
     /* Phrase 2: Monospace in Electric Neon Cyan (#00f2fe) */
     .phrase-2 {
       font-size: 24px;
       fill: #00f2fe;
-      animation: showPhrase2 9s infinite ease-in-out;
+      animation: showPhrase2 12s infinite ease-in-out;
     }
 
     /* Phrase 3: Monospace in Radiant Warm Amber Gold (#fbbf24) */
     .phrase-3 {
       font-size: 24px;
       fill: #fbbf24;
-      animation: showPhrase3 9s infinite ease-in-out;
+      animation: showPhrase3 12s infinite ease-in-out;
+    }
+
+    /* Phrase 4: Monospace in Vivid Emerald Mint (#10b981) */
+    .phrase-4 {
+      font-size: 24px;
+      fill: #10b981;
+      animation: showPhrase4 12s infinite ease-in-out;
     }
   ]]></style>
 
@@ -71,5 +84,10 @@
   <!-- Phrase 3: Pursuing AICS @ IIT PATNA (Monospace, Amber Gold) -->
   <text x="450" y="42" text-anchor="middle" class="mono-line phrase-3">
     🏛️ Pursuing AICS @ IIT PATNA
+  </text>
+
+  <!-- Phrase 4: Sponsorship Team Member @ STC, IIT Patna (Monospace, Emerald Mint) -->
+  <text x="450" y="42" text-anchor="middle" class="mono-line phrase-4">
+    🤝 Sponsorship Team Member @ STC, IIT Patna
   </text>
 </svg>
