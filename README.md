@@ -47,6 +47,18 @@
 
 ---
 
+<!-- Profile Visitor & Community Statistics -->
+<p align="center">
+  <a href="https://github.com/AlankritaPaul">
+    <img src="https://komarev.com/ghpvc/?username=AlankritaPaul&label=Profile+Views&color=0284c7&style=for-the-badge" alt="Profile Views" />
+  </a>
+  <a href="https://github.com/AlankritaPaul?tab=followers">
+    <img src="https://img.shields.io/github/followers/AlankritaPaul?style=for-the-badge&logo=github&label=Followers&color=10b981" alt="Followers" />
+  </a>
+</p>
+
+---
+
 <p align="center">
   <img src="learning-building.svg" alt="Learning by Building" width="600px" />
 </p>
